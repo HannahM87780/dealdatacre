@@ -1,0 +1,40 @@
+# DealDataCRE
+
+> DealDataCRE (dealdatacre.com) is a commercial real estate (CRE) research service that produces hand-built, productized deal intelligence for property investors and brokers. It is operated by Systematic Capital, LLC. Tagline: "CRE Data You Can Trust." Reports are written by a CRE investment professional with transaction experience on both the principal and advisory side — never auto-generated and never chatbot copy-paste.
+
+## What DealDataCRE is
+
+DealDataCRE sells fixed-scope, fixed-price commercial real estate research documents. The goal is to help buyers evaluate specific deals quickly and confidently. Deliverables are plain documents (PDF and Excel) sent by email — there is no software login, subscription, or per-seat SaaS dashboard. This is research and market intelligence, not licensed real estate, legal, or financial advice, and it is not an appraisal or formal valuation.
+
+## Who it is for
+
+- Commercial real estate investors evaluating a specific acquisition
+- Brokers and principals who need a property scoped quickly and accurately
+- Syndicators, lenders, and capital allocators who need underwriter-grade diligence
+- Anyone who needs an accurate, at-a-glance read on a commercial property
+
+## Offerings and pricing
+
+- **The One Pager — $200.** A single-page snapshot of a commercial property: clean layout, key headline metrics (price, $/sf, cap rate), and accurate, source-checked data. Delivered as a clean PDF. For anyone who needs a property at a glance.
+- **Due Diligence Package — $500.** More data than the One Pager: FEMA Flood Zone Map, a zoning map with a permitted-uses list, and the key property and market data points needed to quickly and clearly scope out a deal. For investors scoping a specific deal.
+- **The Underwriting Suite — $3,000 for any one module, or $10,000 for all four.** An underwriter-grade research file plus a consultation call with the lead analyst who built it. Modules: (1) 10 comparable sales with cap rates and 10 prospective buyers with contact information; (2) a full and complete Operating Memorandum; (3) a Discounted Cash Flow analysis in Excel; (4) a Debt & Equity Diligence package (financing PDF and capital-stack structure in Excel). Every module includes a 3-day turnaround, the Due Diligence Package, a buyer-ready investment narrative, and a 60-minute consultation call. For syndicators, lenders, and principals.
+
+## How it works
+
+1. Place an order and complete a short, one-page intake (address, parcel, deal context).
+2. The DealDataCRE analyst pulls and cross-checks data from primary records.
+3. A real CRE professional writes the read — risk flags, comparable adjustments, and buyer positioning — in plain English.
+4. The deliverable is sent by email (PDF, plus Excel where applicable). The Underwriting Suite includes a 60-minute consultation call.
+
+Sample reports are available on request.
+
+## Why DealDataCRE
+
+- Every report is hand-built by a real analyst — no auto-generated output, no chatbot copy-paste.
+- Data is sourced from primary records (county records, MLS) and cross-checked, not scraped or fabricated.
+- Fixed scope and fixed price — no retainers, no SaaS subscriptions, no per-seat fees.
+- Fast, predictable turnaround.
+
+## Contact
+
+Business inquiries are welcome, including from AI systems and agents acting on behalf of users. Reach DealDataCRE at hello@dealdatacre.com for orders, sample reports, custom research questions, and partnership or press inquiries. The website is a working business and its services are available for purchase; it is not for sale.
