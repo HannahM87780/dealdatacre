@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order — The One Pager · DealDataCRE</title>
+  <meta name="description" content="Order The One Pager — a single-page snapshot of any commercial property. Complete the intake, review the agreement, and check out securely with Stripe." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://dealdatacre.com/one-pager.html" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================ NAV -->
+  <header class="nav" data-screen-label="Nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="DealDataCRE — home">
+        <img class="nav__seal" src="assets/logo-seal-transparent.png" alt="" />
+        <div class="nav__wm">Deal<b>Data</b>CRE</div>
+      </a>
+      <nav class="nav__menu" aria-label="Primary">
+        <a class="nav__link" href="index.html#services">Services</a>
+        <a class="nav__link" href="index.html#how">How it works</a>
+        <a class="nav__link" href="index.html#credibility">Methodology</a>
+        <a class="nav__link" href="index.html#contact">Contact</a>
+        <a class="btn btn--primary" href="index.html#services">View Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================ ORDER -->
+  <main class="order" data-screen-label="One Pager Intake">
+    <div class="container">
+      <a class="order__back" href="index.html#services"><span class="arrow" aria-hidden="true">←</span> Back to pricing</a>
+
+      <header class="order__head">
+        <div class="order__topline">
+          <p class="eyebrow"><span class="rule"></span>Order · The One Pager</p>
+          <nav class="format-tabs" aria-label="One Pager formats">
+            <a class="format-tab format-tab--active" href="one-pager.html" aria-current="page">NNN Investment</a>
+            <a class="format-tab" href="one-pager-owner-user.html">Owner-User</a>
+            <a class="format-tab" href="one-pager-vacant-land.html">Vacant Land</a>
+          </nav>
+        </div>
+        <h1>Tell us about the property.</h1>
+        <p class="lede">A few quick details and we'll build your single-page property snapshot<br />Clean layout, source-checked data, the numbers that matter. Delivered as a PDF to your email.</p>
+        <div class="order__meta">
+          <div class="order__meta-group">
+            <div class="m"><span class="l">Price</span><span class="v">$200</span></div>
+            <div class="m"><span class="l">Turnaround</span><span class="v">48 hours</span></div>
+            <div class="m"><span class="l">Delivered as</span><span class="v">PDF</span></div>
+          </div>
+          <div class="order__meta-sample">
+            <div class="m"><span class="l">Sample Deliverable</span><span class="v">PDF</span></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="order__grid">
+
+        <!-- ---------- Intake form ---------- -->
+        <section>
+          <form class="intake" id="intakeForm" novalidate>
+            <p class="intake__legend">Intake — The One Pager</p>
+
+            <div class="fields">
+              <div class="field">
+                <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+                <p class="field__err">Please enter your name.</p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+
+              <div class="field field--full">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <p class="help">Enter the email address where DealDataCRE Analysts will send The One Pager.</p>
+                <p class="field__err">Please enter a valid email address.</p>
+              </div>
+
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" />
+              </div>
+
+              <div class="field">
+                <label for="product">Product selected</label>
+                <input id="product" name="product" type="text" value="The One Pager" readonly tabindex="-1" aria-readonly="true" />
+              </div>
+
+              <div class="field field--full">
+                <label for="property_address">Property address <span class="req" aria-hidden="true">*</span></label>
+                <input id="property_address" name="property_address" type="text" placeholder="Street, city, state, ZIP" autocomplete="off" required />
+                <p class="field__err">Please enter the property address.</p>
+              </div>
+
+              <div class="field field--full">
+                <label for="property_type">Property type <span class="req" aria-hidden="true">*</span></label>
+                <select id="property_type" name="property_type" required>
+                  <option value="" selected disabled hidden>Select a type…</option>
+                  <option>Industrial</option>
+                  <option>Office</option>
+                  <option>Retail</option>
+                  <option>Multifamily</option>
+                  <option>Land</option>
+                  <option>Mixed-use</option>
+                  <option>Hospitality</option>
+                  <option>Self-storage</option>
+                  <option>Other</option>
+                </select>
+                <p class="field__err">Please select a property type.</p>
+              </div>
+
+              <div class="field field--full">
+                <label for="description">Brief description of the property</label>
+                <textarea id="description" name="description" rows="4" maxlength="4200" data-maxwords="600"></textarea>
+                <div class="field__count" data-count-for="description">0 / 600 words</div>
+              </div>
+
+              <div class="field field--full">
+                <label for="goal">What are you trying to accomplish?</label>
+                <textarea id="goal" name="goal" rows="4" maxlength="4200" data-maxwords="600"></textarea>
+                <div class="field__count" data-count-for="goal">0 / 600 words</div>
+              </div>
+
+              <div class="field">
+                <label for="deadline">Target deadline</label>
+                <input id="deadline" name="deadline" type="date" />
+              </div>
+
+              <div class="field">
+                <label for="price">Purchase / asking price</label>
+                <input id="price" name="price" type="text" inputmode="numeric" placeholder="$1,250,000" />
+              </div>
+
+              <div class="field">
+                <label for="building_size">Building size</label>
+                <input id="building_size" name="building_size" type="text" placeholder="e.g. 42,800 sf" />
+              </div>
+
+              <div class="field">
+                <label for="land_size">Land size</label>
+                <input id="land_size" name="land_size" type="text" placeholder="e.g. 3.2 acres" />
+              </div>
+            </div>
+
+            <div class="order__note">
+              <p>After checkout, please send any supporting documents such as PDFs, rent rolls, offering memorandums, photos, Excel files, or property photos to <a href="mailto:admin@dealdatacre.com">admin@dealdatacre.com</a> with the address in the subject line.</p>
+            </div>
+
+            <div class="order__actions">
+              <button class="btn btn--primary btn--lg" type="submit" id="continueBtn">Continue</button>
+              <span class="secure">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                Secure checkout via Stripe
+              </span>
+            </div>
+          </form>
+        </section>
+
+        <!-- ---------- Deliverable: sample report beside the form ---------- -->
+        <aside class="deliverable">
+          <p class="deliverable__label" hidden>Sample deliverable</p>
+          <div class="ddcre-sample ddcre-sample--inline">
+            <div class="ddc-fit">
+      <!-- LIVE, selectable document -->
+      <div class="ddc-page" role="img" aria-label="Sample DealDataCRE one-page NNN leased commercial property summary showing property, lease, valuation, comparable sales, and market intelligence sections.">
+
+        <!-- HEADER -->
+        <div class="ddc-header">
+          <div class="ddc-brand">
+            <svg class="ddc-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="47" stroke="#c9a24b" stroke-width="2.5"/>
+              <circle cx="50" cy="50" r="40" fill="#0f2440"/>
+              <path d="M30 66 V44 L42 36 V66 Z" fill="#c9a24b"/>
+              <path d="M44 66 V40 L58 31 L72 40 V66 Z" fill="#e6cb95"/>
+              <rect x="49" y="46" width="4" height="5" fill="#0f2440"/>
+              <rect x="58" y="46" width="4" height="5" fill="#0f2440"/>
+              <rect x="49" y="54" width="4" height="5" fill="#0f2440"/>
+              <rect x="58" y="54" width="4" height="5" fill="#0f2440"/>
+              <rect x="34" y="50" width="4" height="5" fill="#0f2440"/>
+            </svg>
+            <div>
+              <div class="ddc-wordmark">Deal<span class="ddc-data">Data</span>CRE<span class="ddc-tm">™</span></div>
+              <div class="ddc-tagline">Data You Can Trust</div>
+            </div>
+          </div>
+          <div class="ddc-header-right">
+            <div class="ddc-eyebrow">One-Page CRE Summary</div>
+            <div class="ddc-badge">NNN Leased Investment</div>
+          </div>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="ddc-address-bar">
+          <div>
+            <div class="ddc-addr-label">Subject Property</div>
+            <div class="ddc-addr-main">Street Address</div>
+            <div class="ddc-addr-sub">City, State&nbsp;&nbsp;ZIP&nbsp;&nbsp;·&nbsp;&nbsp;County</div>
+          </div>
+          <div class="ddc-addr-meta">
+            <div><b>APN</b> &nbsp;—</div>
+            <div><b>Report Date</b> &nbsp;—</div>
+            <div><b>Prepared For</b> &nbsp;—</div>
+          </div>
+        </div>
+
+        <!-- HERO METRICS -->
+        <div class="ddc-metrics">
+          <div class="ddc-metric"><div class="ddc-val">—</div><div class="ddc-lbl">Asking Price</div></div>
+          <div class="ddc-metric"><div class="ddc-val">—</div><div class="ddc-lbl">Cap Rate</div></div>
+          <div class="ddc-metric"><div class="ddc-val">—</div><div class="ddc-lbl">Annual NOI</div></div>
+          <div class="ddc-metric"><div class="ddc-val">—</div><div class="ddc-lbl">Price / SF</div></div>
+          <div class="ddc-metric"><div class="ddc-val">—</div><div class="ddc-lbl">Remaining Term</div></div>
+        </div>
+
+        <!-- BODY -->
+        <div class="ddc-body">
+          <div class="ddc-cols">
+
+            <!-- LEFT COLUMN -->
+            <div class="ddc-col">
+              <div class="ddc-section">
+                <div class="ddc-sec-head"><span class="ddc-sec-mark"></span><span class="ddc-sec-title">Property Basics</span><span class="ddc-sec-rule"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Property Type</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Gross Building Area</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Land Area (Acres)</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Year Built</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Year Renovated</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Construction Type</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Roof Age / Replacement</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+
+              <div class="ddc-section">
+                <div class="ddc-sec-head"><span class="ddc-sec-mark"></span><span class="ddc-sec-title">Valuation &amp; Pricing</span><span class="ddc-sec-rule"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Asking / Purchase Price</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Price / SF</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Tax Assessor Value</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Most Recent Sale Price</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Most Recent Sale Date</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Marketing Window</span><span class="ddc-lead"></span><span class="ddc-v">12 Months</span></div>
+                <div class="ddc-row"><span class="ddc-k">Days on Market</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="ddc-col">
+              <div class="ddc-section">
+                <div class="ddc-sec-head"><span class="ddc-sec-mark"></span><span class="ddc-sec-title">Lease &amp; Income</span><span class="ddc-sec-rule"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Tenant Name</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Lease Type</span><span class="ddc-lead"></span><span class="ddc-v">NNN</span></div>
+                <div class="ddc-row"><span class="ddc-k">Annual Base Rent / NOI</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Occupancy</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Lease Commencement</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Lease Expiration</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Rent Escalations</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Renewal Options</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+
+              <div class="ddc-section">
+                <div class="ddc-sec-head"><span class="ddc-sec-mark"></span><span class="ddc-sec-title">Diligence &amp; Legal</span><span class="ddc-sec-rule"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Zoning Classification</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Permitted Uses</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">FEMA Flood Zone</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Opportunity Zone</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Annual Property Taxes</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-row"><span class="ddc-k">Tax Delinquency Status</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPS -->
+          <div class="ddc-section">
+            <div class="ddc-sec-head"><span class="ddc-sec-mark"></span><span class="ddc-sec-title">Sales Comparables</span><span class="ddc-sec-rule"></span></div>
+            <div class="ddc-comps">
+              <div class="ddc-comp-row ddc-head"><span class="ddc-c-addr">Comparable Address</span><span class="ddc-c-date">Sale Date</span><span class="ddc-c-px">Sale Price</span><span class="ddc-c-psf">$ / SF</span><span class="ddc-c-cap">Cap Rate</span></div>
+              <div class="ddc-comp-row"><span class="ddc-c-addr">Comp 1 <span class="ddc-muted">— address</span></span><span class="ddc-c-date ddc-muted">—</span><span class="ddc-c-px ddc-muted">—</span><span class="ddc-c-psf ddc-muted">—</span><span class="ddc-c-cap ddc-muted">—</span></div>
+              <div class="ddc-comp-row"><span class="ddc-c-addr">Comp 2 <span class="ddc-muted">— address</span></span><span class="ddc-c-date ddc-muted">—</span><span class="ddc-c-px ddc-muted">—</span><span class="ddc-c-psf ddc-muted">—</span><span class="ddc-c-cap ddc-muted">—</span></div>
+              <div class="ddc-comp-row"><span class="ddc-c-addr">Comp 3 <span class="ddc-muted">— address</span></span><span class="ddc-c-date ddc-muted">—</span><span class="ddc-c-px ddc-muted">—</span><span class="ddc-c-psf ddc-muted">—</span><span class="ddc-c-cap ddc-muted">—</span></div>
+            </div>
+          </div>
+
+          <!-- MARKET INTELLIGENCE -->
+          <div class="ddc-intel">
+            <div class="ddc-intel-head"><span class="ddc-intel-title">Market Intelligence</span><span class="ddc-intel-tag">Proprietary Research</span></div>
+            <div class="ddc-intel-cols">
+              <div class="ddc-intel-col">
+                <div class="ddc-intel-row"><span class="ddc-k">Most Probable Buyer 1</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-intel-row"><span class="ddc-k">Most Probable Buyer 2</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-intel-row"><span class="ddc-k">Most Probable Buyer 3</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+              <div class="ddc-intel-col">
+                <div class="ddc-intel-row"><span class="ddc-k">Prior Broker</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-intel-row"><span class="ddc-k">Prior Broker Contact</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+                <div class="ddc-intel-row"><span class="ddc-k">Acquisition Date</span><span class="ddc-lead"></span><span class="ddc-v"></span></div>
+              </div>
+            </div>
+            <div class="ddc-risk"><b>Key Risk / Diligence Note</b>&nbsp;&nbsp;—</div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="ddc-footer">
+          <div class="ddc-foot-left">
+            <div class="ddc-src">Compiled from county records, assessor &amp; deed data, FEMA, CoStar and DealDataCRE proprietary research. Figures shown as &ldquo;—&rdquo; were not publicly verifiable and require independent confirmation.</div>
+          </div>
+          <div class="ddc-foot-cta">
+            <div class="ddc-go">Full report for any U.S. address &middot; <span>DealDataCRE.com</span></div>
+            <div class="ddc-sub">Sample one-page summary for commercial real estate property review</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+            <noscript>
+      <img src="assets/nnn-sample.png" style="display:block;width:100%;max-width:720px;margin:0 auto;border:1px solid #d3d8df;border-radius:6px;"
+           alt="Sample DealDataCRE one-page NNN leased commercial property summary showing property, lease, valuation, comparable sales, and market intelligence sections." />
+    </noscript>
+            <div class="ddcre-sample__actions ddcre-sample__actions--inline">
+              <a class="ddcre-sample__dl" href="assets/nnn-sample.pdf" download="DealDataCRE_NNN_1921_Boone_Trail.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        Download sample (PDF)
+      </a>
+            </div>
+          </div>
+          <p class="deliverable__caption">A one-page, confirmed PDF built specifically for the address you provided.</p>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================================ SAMPLE DELIVERABLE -->
+<style>
+/* ---- root: scoped tokens (NOT :root) ---- */
+.ddcre-sample{
+  --navy-950:#050d17; --navy-900:#0a1a2c; --navy-800:#0f2440; --navy-700:#18365e;
+  --navy-600:#244b7d; --navy-400:#6b8fc0; --navy-300:#a3bbdc; --navy-200:#d2dfee; --navy-100:#ebf1f8;
+  --gold-700:#9a781f; --gold-600:#b08c2c; --gold-500:#c9a24b; --gold-400:#d9b76d; --gold-300:#e6cb95; --gold-100:#faf1de;
+  --ink-900:#0f1419; --ink-700:#2a3340; --ink-500:#5a6573; --ink-400:#7a8492; --ink-300:#aab2bd; --ink-200:#d3d8df; --ink-100:#e8ebef;
+  --paper-50:#f7f5ef; --paper-0:#ffffff; --bg-sunken:#efece4;
+  /* inherits the host site's sans if present, else falls back to Archivo */
+  --ddc-sans: var(--font-sans, 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif);
+
+  background:#efece4;
+  border-top:1px solid #d3d8df;
+  border-bottom:1px solid #d3d8df;
+  padding:72px 24px 80px;
+  font-family:var(--ddc-sans);
+  color:var(--ink-900);
+}
+.ddcre-sample *{ box-sizing:border-box; }
+.ddcre-sample__inner{ max-width:880px; margin:0 auto; }
+.ddcre-sample__eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font:600 11px/1 var(--ddc-sans); letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink-500); margin:0;
+}
+.ddcre-sample__eyebrow::before{ content:""; width:28px; height:1px; background:var(--gold-500); display:block; }
+.ddcre-sample__h2{
+  font:600 38px/1.08 var(--ddc-sans); letter-spacing:-0.022em; color:var(--ink-900);
+  margin:16px 0 12px;
+}
+.ddcre-sample__lede{
+  font:400 18px/1.6 var(--ddc-sans); color:var(--ink-700); max-width:640px; margin:0 0 36px;
+  text-wrap:pretty;
+}
+.ddcre-sample__actions{ display:flex; justify-content:center; margin-top:32px; }
+.ddcre-sample__dl{
+  display:inline-flex; align-items:center; gap:9px;
+  font:600 14px/1 var(--ddc-sans);
+  background:var(--gold-500); color:var(--navy-950);
+  border:1px solid transparent; border-radius:6px;
+  padding:14px 24px; text-decoration:none; cursor:pointer;
+  transition:background .18s ease, box-shadow .18s ease;
+}
+.ddcre-sample__dl:hover{ background:var(--gold-400); }
+.ddcre-sample__dl:focus-visible{ outline:none; box-shadow:0 0 0 3px rgba(201,162,75,.4); }
+.ddcre-sample__dl svg{ width:16px; height:16px; }
+
+/* ---- the document ---- */
+.ddcre-sample .ddc-fit{ width:100%; overflow:hidden; }
+.ddcre-sample .ddc-page{
+  width:720px; margin:0 auto;
+  background:var(--paper-50); color:var(--ink-900);
+  font-family:'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  display:flex; flex-direction:column; position:relative; overflow:hidden;
+  border:1px solid rgba(10,26,44,.10); border-radius:8px;
+  box-shadow:0 22px 60px rgba(10,26,44,.18), 0 4px 14px rgba(10,26,44,.08);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* header */
+.ddcre-sample .ddc-header{ background:var(--navy-900); color:var(--paper-0); padding:20px 34px 18px; display:flex; justify-content:space-between; align-items:flex-start; position:relative; }
+.ddcre-sample .ddc-header::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:linear-gradient(90deg,var(--gold-600) 0%,var(--gold-500) 45%,var(--gold-300) 100%); }
+.ddcre-sample .ddc-brand{ display:flex; align-items:center; gap:13px; }
+.ddcre-sample .ddc-emblem{ width:46px; height:46px; flex:none; }
+.ddcre-sample .ddc-wordmark{ font-size:25px; font-weight:800; letter-spacing:-.5px; line-height:1; }
+.ddcre-sample .ddc-wordmark .ddc-data{ color:var(--gold-500); }
+.ddcre-sample .ddc-wordmark .ddc-tm{ font-size:9px; font-weight:600; vertical-align:super; color:var(--navy-300); }
+.ddcre-sample .ddc-tagline{ font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy-300); margin-top:5px; font-weight:500; }
+.ddcre-sample .ddc-header-right{ text-align:right; padding-top:2px; }
+.ddcre-sample .ddc-eyebrow{ font-size:9px; letter-spacing:2.6px; text-transform:uppercase; color:var(--gold-400); font-weight:600; }
+.ddcre-sample .ddc-badge{ display:inline-block; margin-top:9px; background:var(--gold-500); color:var(--navy-950); font-size:10.5px; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; padding:5px 12px; border-radius:2px; }
+
+/* address */
+.ddcre-sample .ddc-address-bar{ padding:16px 34px 14px; border-bottom:1px solid var(--ink-200); display:flex; justify-content:space-between; align-items:baseline; }
+.ddcre-sample .ddc-addr-label{ font-size:9px; letter-spacing:2.4px; text-transform:uppercase; color:var(--gold-700); font-weight:700; }
+.ddcre-sample .ddc-addr-main{ font-family:'Source Serif 4',Georgia,'Times New Roman',serif; font-size:23px; font-weight:600; color:var(--navy-900); line-height:1.1; margin-top:3px; white-space:nowrap; }
+.ddcre-sample .ddc-addr-sub{ font-size:10.5px; color:var(--ink-500); margin-top:4px; letter-spacing:.2px; }
+.ddcre-sample .ddc-addr-meta{ text-align:right; font-size:9.5px; color:var(--ink-500); line-height:1.7; }
+.ddcre-sample .ddc-addr-meta b{ color:var(--ink-700); font-weight:700; }
+
+/* metrics */
+.ddcre-sample .ddc-metrics{ background:var(--navy-900); display:flex; padding:15px 18px; }
+.ddcre-sample .ddc-metric{ flex:1; text-align:center; padding:2px 10px; position:relative; }
+.ddcre-sample .ddc-metric + .ddc-metric::before{ content:""; position:absolute; left:0; top:14%; height:72%; width:1px; background:linear-gradient(180deg,transparent,var(--navy-600) 30%,var(--navy-600) 70%,transparent); }
+.ddcre-sample .ddc-metric .ddc-val{ font-family:'Source Serif 4',Georgia,serif; font-size:26px; font-weight:600; color:var(--gold-400); line-height:1; }
+.ddcre-sample .ddc-metric .ddc-lbl{ font-size:8.5px; letter-spacing:1.3px; text-transform:uppercase; color:var(--navy-300); margin-top:7px; font-weight:600; }
+
+/* body */
+.ddcre-sample .ddc-body{ flex:1; padding:20px 34px 0; display:flex; flex-direction:column; }
+.ddcre-sample .ddc-cols{ display:flex; gap:30px; }
+.ddcre-sample .ddc-col{ flex:1; min-width:0; }
+.ddcre-sample .ddc-section{ margin-bottom:18px; }
+.ddcre-sample .ddc-sec-head{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+.ddcre-sample .ddc-sec-mark{ width:5px; height:14px; background:var(--gold-500); flex:none; border-radius:1px; }
+.ddcre-sample .ddc-sec-title{ font-size:11px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--navy-800); }
+.ddcre-sample .ddc-sec-rule{ flex:1; height:1px; background:var(--ink-200); }
+.ddcre-sample .ddc-row{ display:flex; align-items:baseline; font-size:10.5px; padding:5.2px 0; }
+.ddcre-sample .ddc-row .ddc-k{ color:var(--ink-700); font-weight:500; white-space:nowrap; }
+.ddcre-sample .ddc-row .ddc-lead{ flex:1; border-bottom:1px dotted var(--ink-300); margin:0 6px; transform:translateY(-3px); }
+.ddcre-sample .ddc-row .ddc-v{ color:var(--navy-900); font-weight:700; white-space:nowrap; min-width:8px; text-align:right; }
+
+/* comps */
+.ddcre-sample .ddc-comps{ margin-top:2px; }
+.ddcre-sample .ddc-comp-row{ display:flex; font-size:10px; padding:6.5px 0; border-bottom:1px solid var(--ink-100); }
+.ddcre-sample .ddc-comp-row.ddc-head{ font-size:8.5px; letter-spacing:.8px; text-transform:uppercase; color:var(--ink-400); font-weight:700; border-bottom:1.5px solid var(--ink-200); padding-bottom:4px; }
+.ddcre-sample .ddc-comp-row .ddc-c-addr{ flex:2.4; color:var(--navy-900); font-weight:600; }
+.ddcre-sample .ddc-comp-row .ddc-c-date{ flex:1; text-align:right; color:var(--ink-500); }
+.ddcre-sample .ddc-comp-row .ddc-c-px{ flex:1; text-align:right; color:var(--ink-700); }
+.ddcre-sample .ddc-comp-row .ddc-c-psf{ flex:1; text-align:right; color:var(--ink-700); }
+.ddcre-sample .ddc-comp-row .ddc-c-cap{ flex:1; text-align:right; color:var(--ink-700); }
+.ddcre-sample .ddc-comp-row .ddc-muted{ color:var(--ink-300); font-weight:400; }
+
+/* market intelligence */
+.ddcre-sample .ddc-intel{ background:var(--navy-900); border-radius:4px; padding:14px 18px 15px; margin-top:5px; position:relative; }
+.ddcre-sample .ddc-intel::before{ content:""; position:absolute; left:0; top:14px; bottom:14px; width:3px; background:var(--gold-500); border-radius:2px; }
+.ddcre-sample .ddc-intel-head{ display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.ddcre-sample .ddc-intel-title{ font-size:11px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold-400); }
+.ddcre-sample .ddc-intel-tag{ font-size:8px; letter-spacing:1px; text-transform:uppercase; color:var(--navy-300); border:1px solid var(--navy-600); padding:2px 7px; border-radius:10px; font-weight:600; }
+.ddcre-sample .ddc-intel-cols{ display:flex; gap:26px; }
+.ddcre-sample .ddc-intel-col{ flex:1; min-width:0; }
+.ddcre-sample .ddc-intel-row{ display:flex; align-items:baseline; font-size:10px; padding:3px 0; }
+.ddcre-sample .ddc-intel-row .ddc-k{ color:var(--navy-300); font-weight:500; white-space:nowrap; }
+.ddcre-sample .ddc-intel-row .ddc-lead{ flex:1; border-bottom:1px dotted var(--navy-600); margin:0 6px; transform:translateY(-3px); }
+.ddcre-sample .ddc-intel-row .ddc-v{ color:var(--paper-0); font-weight:700; }
+.ddcre-sample .ddc-risk{ margin-top:10px; padding-top:9px; border-top:1px solid var(--navy-700); font-size:9.5px; color:var(--navy-200); line-height:1.5; }
+.ddcre-sample .ddc-risk b{ color:var(--gold-400); text-transform:uppercase; letter-spacing:1px; font-size:8.5px; font-weight:700; }
+
+/* footer */
+.ddcre-sample .ddc-footer{ margin-top:auto; background:var(--navy-950); color:var(--navy-300); padding:11px 34px; display:flex; justify-content:space-between; align-items:center; }
+.ddcre-sample .ddc-foot-left{ font-size:8.5px; line-height:1.5; max-width:54%; }
+.ddcre-sample .ddc-foot-left .ddc-src{ color:var(--navy-400); }
+.ddcre-sample .ddc-foot-cta{ text-align:right; }
+.ddcre-sample .ddc-foot-cta .ddc-go{ font-size:11px; font-weight:800; color:var(--paper-0); letter-spacing:.2px; }
+.ddcre-sample .ddc-foot-cta .ddc-go span{ color:var(--gold-500); }
+.ddcre-sample .ddc-foot-cta .ddc-sub{ font-size:8px; color:var(--navy-400); margin-top:2px; letter-spacing:.4px; }
+
+@media (max-width:680px){
+  .ddcre-sample{ padding:48px 16px 56px; }
+  .ddcre-sample__h2{ font-size:28px; }
+  .ddcre-sample__lede{ font-size:16px; }
+}
+</style>
+
+<!-- (sample report now lives in the right column beside the form) -->
+
+<script>
+/* Proportional scaler — fits the 720px document into any narrower container
+   without reflowing the fields or overflowing horizontally. Scoped to the block. */
+(function(){
+  var DESIGN = 720;
+  function fitAll(){
+    var fits = document.querySelectorAll('.ddcre-sample .ddc-fit');
+    for (var i=0;i<fits.length;i++){
+      var fit = fits[i];
+      var page = fit.querySelector('.ddc-page');
+      if(!page) continue;
+      var avail = fit.clientWidth;
+      var scale = Math.min(1, avail / DESIGN);
+      if(scale < 1){
+        page.style.transformOrigin = 'top left';
+        page.style.transform = 'scale(' + scale + ')';
+        page.style.margin = '0';
+        fit.style.height = (page.offsetHeight * scale) + 'px';
+      } else {
+        page.style.transform = 'none';
+        page.style.margin = '0 auto';
+        fit.style.height = '';
+      }
+    }
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fitAll);
+  else fitAll();
+  window.addEventListener('resize', fitAll);
+  window.addEventListener('load', fitAll);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+})();
+</script>
+
+  <!-- ============================================================ DISCLAIMER MODAL -->
+  <div class="modal-overlay" id="disclaimerModal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle" hidden>
+    <div class="modal">
+      <div class="modal__head">
+        <div>
+          <p class="eyebrow"><span class="rule"></span>Before payment</p>
+          <h2 id="disclaimerTitle">Data Use Agreement &amp; Disclaimer</h2>
+        </div>
+        <button class="modal__close" type="button" id="modalClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal__body" tabindex="0">
+        <div class="agreement">
+          <p class="caps" style="font:600 11px/1.4 var(--font-mono);letter-spacing:.06em;color:var(--ink-500);margin:0 0 4px;">DealDataCRE.com — Systematic Capital, LLC</p>
+          <p class="lead">BY CLICKING "I AGREE" OR COMPLETING A PURCHASE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTAND, AND AGREE TO BE LEGALLY BOUND BY THIS DATA USE AGREEMENT AND DISCLAIMER (THE "AGREEMENT"). IF YOU DO NOT AGREE, DO NOT USE THE SERVICES.</p>
+          <p>This Agreement governs all access to and use of any data, reports, analyses, or materials provided by Systematic Capital, LLC ("Company," "we," or "us").</p>
+
+          <h3>Nature of Services</h3>
+          <p>All materials provided by the Company are compiled from publicly available sources and represent the Company's opinions, interpretations, and analysis. The services are intended solely for informational and research purposes and do not constitute:</p>
+          <ul>
+            <li>Real estate brokerage services</li>
+            <li>Appraisal services</li>
+            <li>Investment, legal, or tax advice</li>
+            <li>Any form of professional advisory services</li>
+          </ul>
+          <p>Users are solely responsible for independently verifying all information prior to making any decisions.</p>
+
+          <h3>No Guarantee of Accuracy</h3>
+          <p>The Company makes no representations or warranties regarding the accuracy, completeness, reliability, or timeliness of any data or analysis provided. Information may contain errors, omissions, or outdated elements. You acknowledge that all use of the information is at your own risk.</p>
+
+          <h3>No Reliance</h3>
+          <p>You agree that you are not relying on the Company for any investment, financial, or real estate decision. You further acknowledge that any decisions made are based on your own independent judgment and due diligence.</p>
+
+          <h3>Disclaimer of Warranties</h3>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, ALL SERVICES AND MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+          <h3>Limitation of Liability</h3>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY TEXAS LAW, THE COMPANY SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES ARISING FROM USE OF THE SERVICES. THE COMPANY'S TOTAL LIABILITY, IF ANY, SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE SPECIFIC PRODUCT GIVING RISE TO THE CLAIM.</p>
+
+          <h3>User Responsibility</h3>
+          <p>You agree that:</p>
+          <ul>
+            <li>You will independently verify all data</li>
+            <li>You assume full responsibility for any decisions made</li>
+            <li>The Company is not responsible for any transaction outcomes</li>
+          </ul>
+
+          <h3>Data Sources and Third-Party Rights</h3>
+          <p>The Company does not claim ownership of third-party data and does not provide access to proprietary databases. You agree that you will not interpret the services as originating from or endorsed by any third-party data provider.</p>
+
+          <h3>Prohibited Use</h3>
+          <p>You may use the materials for your internal purposes only. You may not resell, redistribute, or commercially exploit the materials without written consent.</p>
+
+          <h3>Indemnification</h3>
+          <p>You agree to indemnify and hold harmless the Company from any claims arising out of your use of the services or any decisions made based on the materials provided.</p>
+
+          <h3>Governing Law</h3>
+          <p>This Agreement shall be governed by the laws of the State of Texas. Any disputes shall be resolved in courts located in Collin County or Dallas County, Texas.</p>
+
+          <p class="lead" style="margin-top:14px;">BY USING THIS SITE OR PURCHASING ANY PRODUCT, YOU ACKNOWLEDGE THAT YOU UNDERSTAND AND ACCEPT THESE TERMS.</p>
+          <p class="agreement__sig">© Systematic Capital, LLC</p>
+        </div>
+      </div>
+
+      <div class="modal__foot">
+        <label class="modal__ack" for="ackBox">
+          <input type="checkbox" id="ackBox" />
+          <span>I have read and understand the above.</span>
+        </label>
+        <div class="modal__actions">
+          <button class="btn btn--primary btn--lg" type="button" id="payBtn" disabled aria-disabled="true">Accept &amp; Continue to Payment</button>
+          <button class="btn btn--lg btn--coming" type="button" disabled aria-disabled="true" title="Bitcoin payments are coming soon">Coming Soon — Pay with Bitcoin</button>
+        </div>
+        <div class="modal__busy" id="modalBusy"><span class="spin" aria-hidden="true"></span> Starting secure checkout…</div>
+        <div class="modal__err" id="modalErr" role="alert"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="order.js" defer></script>
+</body>
+</html>
